@@ -1,6 +1,6 @@
 ### Pizza menu !
 
-Hosted at 👉 [Fast React Pizza Co.]("https://fastreactpizzaco.netlify.app/")
+Hosted at 👉 [Fast React Pizza Co.](https://fastreactpizzaco.netlify.app/)
 
 Pizza Menu is my first small project on React which made use of the following concepts :
 

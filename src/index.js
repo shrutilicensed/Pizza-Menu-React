@@ -11,7 +11,6 @@ function App() {
   );
 }
 function Header() {
-  // const style = { fontSize: "48px", color: "red", textTransform: "uppercase" };
   const style = {};
   return (
     <header className="header">
@@ -67,7 +66,6 @@ function Menu() {
   ];
 
   const pizzas = pizzaData;
-  // const pizzas = [];
   const numPizzas = pizzas.length;
 
   return (
@@ -90,36 +88,13 @@ function Menu() {
       ) : (
         <p>We're still working on our menu. Please come back later :)</p>
       )}
-      {/* NOTE: Sometimes we want to pass a unique key to react fragment, then we write the complete tag <React.fragment key="xx">  */}
-
-      {/* <Pizza
-        name="Pizza Spinaci"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        price={12}
-        photoName="https://i.ibb.co/YP3L2HY/spinaci.jpg"
-        soldOut={false}
-      />
-      <Pizza
-        name="Pizza Funghi"
-        ingredients="Tomato, mozarella, mushrooms, and onion"
-        price={12}
-        photoName="https://i.ibb.co/7WXYjgv/funghi.jpg"
-        soldOut={false}
-      /> */}
-      {/* <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza /> */}
     </main>
   );
 }
 
 function Pizza({ pizzaObj }) {
-  // if (pizzaObj.soldOut) return null;
   return (
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
-      {/* <img src="03-pizza-menu/pizzas/spinaci.jpg" alt="spinaci pizza" /> */}
       <img src={pizzaObj.photoName} alt={pizzaObj.name} border="0"></img>
       <div>
         <h3>{pizzaObj.name}</h3>
@@ -136,14 +111,8 @@ function Footer() {
   const closingHour = 22;
   const isOpen = currentHour >= openHour && currentHour <= closingHour;
   console.log(isOpen);
-
-  // isOpen ? alert("Hi! We're Open") : alert("Sorry we're closed");
-
-  // return React.createElement("footer", null, "Hi, we're currently open");
   return (
     <footer className="footer">
-      {/* {new Date().toLocaleTimeString()} We're currently open ! */}
-
       {isOpen ? (
         <Order closingHour={closingHour} />
       ) : (
